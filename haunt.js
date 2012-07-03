@@ -1,15 +1,21 @@
-module.exports = {
-    
-    'issue': { 
+var assert = require('assert');
 
-        'should include a <3 in the description': function (assert, haunt) {
-            assert.ok(/<3/.test(haunt.description));
+module.exports = {
+
+    'issue': {
+
+        'issues should be prefixed with the word bug': function (issue) {
+            assert.ok(/^bug/.test(issue.title));
         },
 
-        'after': function (haunt) {
-            if (!haunt.failed.length) haunt.tag('<3');
+        'after': function (issue) {
+
+            if (issue.reporter.stats.failures) {
+                issue.reportFailures(issue.close.bind(issue));
+            }
+
         }
 
     }
-    
+
 }
