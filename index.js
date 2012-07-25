@@ -1,1 +1,7 @@
-// Here be jQuery
+/**package
+ * { "name": "package-jquery"
+ * , "version": "1.0.0"
+ * , "description": "" }
+ **/
+
+ var x = 'foo';
