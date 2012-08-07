@@ -1,5 +1,5 @@
 /**package
- * { "name": "package-jquery"
+ * { "name": "fat-jquery"
  * , "version": "1.0.0"
  * , "description": "" }
  **/
